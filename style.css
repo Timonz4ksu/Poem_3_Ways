@@ -41,19 +41,30 @@ body{
         font-size: 1.5em;
     }
     .heading{
-        margin-top: 0vh;
-        margin-left: 0vw;
-        height: 90vh;
-        
+        background-color: aqua;
+        height: 70vh;
+        left: 10px;        
     }
     .title{
+        background-color: blanchedalmond;
         transform-origin: center;
         transform: rotate(-90deg);
-        font-size: 1em;
-        margin-top: 30vh;
-        margin-left: 50vw;
+        font-size: 2.5em;
+        margin-top: 0vh;
+        margin-left: 0vw;
+        top: 0%;
+        width: 20vw;
     }
     .author{
+        font-size: 1em;
+        top: 47vh;
+        left: 16vw;
+        font-size: 2em;
+        width: 100vw;
+    }
+    .poem{
+        display: grid;
+        grid-template-columns: 10fr 80fr 10fr;
         font-size: 1em;
     }
 }
