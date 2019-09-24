@@ -15,12 +15,14 @@ body{
     font-size: 3.5em;
     margin-top: 20vh;
     margin-left: 5vw;
+    z-index: 100;
 }
 .author{
     position: absolute;
     font-size: 2.5em;
     top: 20vh;
     right: 5vw;
+    z-index: 100;
 }
 .poem{
     display: grid;
@@ -28,11 +30,32 @@ body{
     margin-top: 25vh;
     margin-bottom: 30vh;
     font-size: 1.25em;
+    z-index: 100;
+}
+.circle1{
+    position: absolute;
+    height: 1700px;
+    width: 1700px;
+    border: 5px solid #bbb;
+    border-radius: 50%;
+    bottom: -1225px;
+    left: -400px;
+    z-index: 10; 
+}
+.circle2{
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    border: 5px solid #bbb;
+    border-radius: 50%;
+    top: -700px;
+    right: -200px;
+    z-index: 10;
 }
 
 @media only screen and (max-width: 800px) {
     body{
-        background-color: cornflowerblue;
+        background-color: darkgray;
         padding: 0;
         margin: 0;
         font-kerning: auto;
@@ -41,37 +64,47 @@ body{
         font-size: 1.5em;
     }
     .heading{
-        background-color: aqua;
-        height: 70vh;
-        left: 10px;        
+        height: 70vh;      
+    }
+    .gridtitle{
+        display: grid;
+        grid-template-columns: 33vw 33vw 33vw;
     }
     .title{
-        background-color: blanchedalmond;
         transform-origin: center;
         transform: rotate(-90deg);
         font-size: 2.5em;
-        margin-top: 0vh;
-        margin-left: 0vw;
-        top: 0%;
-        width: 20vw;
+        width: 10vw;
+        font-size: 2em;
+        text-align: center;
+        margin-left: 8vw;
     }
     .author{
+        position: relative;
         font-size: 1em;
-        top: 47vh;
-        left: 16vw;
-        font-size: 2em;
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: -15vh;
         width: 100vw;
     }
     .poem{
         display: grid;
         grid-template-columns: 10fr 80fr 10fr;
-        font-size: 1em;
+        font-size: .8em;
+        margin-top: 10vh;
+        text-align: center;
+    }
+    .circle1{
+        display: none;
+    }
+    .circle2{
+        display: none;
     }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1280px) {
     body{
-        background-color: cadetblue;
+        background-color: rgb(105, 0, 0);
         padding: 0;
         margin: 0;
         height: 100vh;
@@ -80,7 +113,6 @@ body{
         font-family: 'Indie Flower', cursive;
         display: grid;
         grid-template-columns: 100vw 100vw;
-        column-gap: 5em;
     }
     .heading{
         width: 100vw;
@@ -100,13 +132,28 @@ body{
     }
     .poem{
         display: grid;
-        grid-template-columns: 35fr 40fr 25fr; 
-        font-size: .9em;
+        grid-template-columns: 15fr 40fr 25fr; 
+        font-size: .8em;
         height: 100vh;
         margin-top: 0%;
         margin-bottom: 0%;
+        line-height: 1vh;
     }
     .center{
-        height: 100vh;
+        height: 60vh;
+    }
+    .circle1{
+        height: 1400px;
+        width: 1400px;
+        border: 5px solid rgb(41, 41, 41);
+        bottom: -300px;
+        left: 400px;
+    }
+    .circle2{
+        height: 500px;
+        width: 500px;
+        border: 5px solid rgb(41, 41, 41);
+        top: -100px;
+        right: -100px;
     }
 }
